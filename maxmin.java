@@ -1,40 +1,32 @@
 class maxmin{
-    public static int miniMaxSum(int[] arr) {
+    public static void miniMaxSum(int[] arr) {
     // Write your code here
        // ArrayList<Integer> ans=new ArrayList<>(arr);
         int sum=0;
-        int min=Integer.MAX_VALUE;
-        int max=Integer.MIN_VALUE;
+        int min=arr[0];
+        int max=arr[0];
         for(int i=0;i<arr.length;i++){
-            sum += arr[i];
-             max=Math.max(max,sum);
-             min=Math.min(min,sum);
-            //System.out.println(min);
-            
+            sum =Math.max(sum + arr[i], sum);
+            // max=Math.max(sum,max);
+            // min=Math.min(sum,min);
         }
         System.out.println(sum);
-        for (int j = 1; j <=arr.length ; j++) {
-            int ans= sum- j;
-            if(ans<max){
-                max=ans;
-                //min=Math.min(min,ans);
-                System.out.println(max);
-            }else if(ans>min){
-                min=ans;
-                // max=Math.max(max,ans);
-                System.out.println(min);
-            }
-            min=Math.min(min,ans);
-            max=Math.max(max,ans);
-            System.out.println(ans);
-            // min=Math.min(min,ans);
-            // max=Math.max(max,ans);
+        int ansmax=Integer.MIN_VALUE;
+        int ansmin=Integer.MAX_VALUE;
+        for (int j = 1; j <= arr.length; j++) {
+            ansmax=Math.max(sum-j ,ansmax);
+            ansmin=Math.min(ansmin,sum-j);
+            //min=Math.min(ans,min);
+            
         }
-        return sum;
+        System.out.println(ansmax);
+        System.out.println(ansmin);
+        
     }
     public static void main(String[] args){
-        int[] arr={1,2,3,4,5};
+        int[] arr={4,5,89,23,19};
         miniMaxSum(arr);
     }
 
 }
+
