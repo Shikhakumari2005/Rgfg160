@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
-class merger{
+class gradingstudent{
     public static List<Integer> gradingStudents(List<Integer> grades) {
         // Write your code here
             ArrayList<Integer> ans=new ArrayList<>(grades);
