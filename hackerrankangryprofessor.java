@@ -6,7 +6,7 @@ public class hackerrankangryprofessor {
     // Write your code here
         int cp=0;
         int cn=0;
-        for(int i=0; i<a.get(i);i++){
+        for(int i=0; i<a.size();i++){
             if(a.get(i)>=0){
                 cn++;
             }else{
