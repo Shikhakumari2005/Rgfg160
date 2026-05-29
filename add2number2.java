@@ -6,13 +6,6 @@ class Node{
     Node next;
     
     
-    Node(Node head,int val){
-      //  this.head=head;
-        this.val=val;
-        this.next = null;
-    }
-}
-class add2number2{
     public  static LinkedList<Integer>  sumnumber(Node l1 ,Node l2){
         Node temp1=l1;
         Node temp=l2;
